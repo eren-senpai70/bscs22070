@@ -1,307 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
+    <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
+    <meta name="author" content="Your Name">
+    <title>Professional Profile</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
-        <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
-        <meta name="author" content="Your Name">
-        <title>Professional Profile</title>
-        <style>
-            /* Basic Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+            text-align: left;
+            direction: ltr;
+            background-color: #c4bebe;
+        }
 
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                padding: 20px;
-                text-align: left;
-                direction: ltr;
-                background-color: #c4bebe;
-            }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
 
-            nav {
-                background-color: #333;
-                color: #fff;
-                padding: 10px;
-                text-align: center;
-            }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
 
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section, header, footer {
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #4e4e4e;
+            text-align: center;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        h3 {
+            cursor: pointer;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        h3:hover {
+            text-decoration: underline;
+        }
+
+        .languages {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .languages button {
+            margin: 10px;
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .languages button:hover {
+            background-color: #666;
+        }
+
+        .skills ul, .projects ul, .certifications ul, .degrees ul, .awards ul {
+            list-style: none;
+        }
+
+        .projects ul li, .certifications ul li, .degrees ul li, .awards ul li {
+            margin-bottom: 15px;
+        }
+
+        .social-media-feed {
+            margin-bottom: 20px;
+        }
+
+        .social-media-feed iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container img {
+            width: 150px;
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 600px) {
             nav ul {
-                list-style: none;
+                flex-direction: row;
+                justify-content: center;
             }
 
             nav ul li {
-                display: inline;
                 margin: 0 15px;
             }
 
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-size: 18px;
+            .profile-container {
+                flex-direction: row;
+                justify-content: left;
+                align-items: flex-start;
             }
 
-            section, header, footer {
-                margin: 20px 0;
-            }
-
-            h1 {
-                color: #4e4e4e;
-                text-align: center;
-            }
-
-            h2{
-                text-decoration: underline;
-            }
-            h3{
-                cursor: pointer;
-                text-align: center;
-                margin-top: 5px;
-            }
-            h3:hover{
-                text-decoration: underline;
-            }
-
-            .container {
-                max-width: 1200px;
-                margin: auto;
-            }
-
-            .languages {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-
-            .languages button {
-                margin: 0 10px;
-                padding: 10px;
-                background-color: #444;
-                color: white;
-                border: none;
-                cursor: pointer;
-            }
-
-            .languages button:hover {
-                background-color: #666;
-            }
-
-            .skills ul, .projects ul, .certifications ul, .degrees ul, .awards ul {
-                list-style: none;
-            }
-
-            .projects ul li, .certifications ul li, .degrees ul li, .awards ul li {
-                margin-bottom: 15px;
-            }
-
-            .social-media-feed {
-                margin-bottom: 20px;
+            .profile-container img {
+                margin-right: 20px;
+                margin-bottom: 0;
+                width: 200px;
             }
 
             .social-media-feed iframe {
-                width: 100%;
                 height: 400px;
             }
+        }
 
-            footer {
-                text-align: center;
-                padding: 10px;
-                background-color: #f4f4f4;
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1200px;
             }
 
+            .languages button {
+                padding: 15px;
+            }
+        }
 
-            
-        </style>
-    </head>
+    </style>
+</head>
 
+<body>
+    <nav>
+        <ul>
+            <li><a href="#skills" id="skills-link">Skills</a></li>
+            <li><a href="#projects" id="projects-link">Projects</a></li>
+            <li><a href="#certifications" id="certifications-link">Certifications</a></li>
+            <li><a href="#degrees" id="degrees-link">Degrees</a></li>
+            <li><a href="#awards" id="awards-link">Awards</a></li>
+        </ul>
+    </nav>
 
-    <body>
-        <nav>
-            <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#degrees">Degrees</a></li>
-            <li><a href="#awards">Awards</a></li>
-            </ul>
-        </nav>
-
-        <header>
-            <h1 id="title">My Profile</h1>
-            <div class="languages">
+    <header>
+        <h1 id="title">My Profile</h1>
+        <div class="languages">
             <button onclick="changeLanguage('en')">English</button>
             <button onclick="changeLanguage('ar')">عربي</button>
             <button onclick="changeLanguage('ur')">اردو</button>
             <button onclick="changeLanguage('fr')">Français</button>
-                </div>
-        </header>
-        <div style="display: flex; align-items: center; justify-content: left; gap: 10px;">
-            <div>
-            <img src="Ahmed.jpg" alt="Your Picture" style="width: 200px; height: auto;">
-            </div>
-            
-            <div>
-                <h2>Ahmed Khalid</h2>
-                <h2>Bscs22070</h2>
-                <p>
-                    Student at Information Technology University, Lahore.
-                </p>
-                <p>
-                    I have been a part of Mindstrom Studios for the past 2 years.
-                </p>
-                <p>
-                    I did my intermediate degree from Government College, Lahore.
-                </p>
-                <p>
-                    I have been a part of many societies and have a great experince in management and work.
-                </p>
-                <p>
-                    My main hobbies include art/sketch art.
-                </p>
-            </div>
         </div>
-    
-        <section id="skills" class="skills">
-            <nav>
-                <h2 id="skills-title">Skills</h2>
-            </nav>
-            <h3 id="soft-skills-title" title="Soft skills" onclick="OW('SoftSkills.html')">- Soft Skills</h3>
-            <h3 id="hard-skills-title" title="Hard skills" onclick="OW('HardSkils.html')">- Hard Skills</h3>
-        </section>
+    </header>
 
-        <section id="projects" class="projects"> 
-            <nav>
-                <h2 id="projects-title">Projects</h2>
-            </nav>
-            <h3 id="soft-skills-title" title="DB Projects" onclick="OW('DBProject.html')">- DataBase Project</h3>
-            <h3 id="hard-skills-title" title="Game Dev Projects" onclick="OW('GameDev.html')">- Game Dev Prjects</h3>
-            
-        </section>
+    <div class="profile-container">
+        <img src="Ahmed.jpg" alt="Your Picture">
+        <div>
+            <h2 id="name">Ahmed Khalid</h2>
+            <h2 id="student-id">Bscs22070</h2>
+            <p id="bio-1">Student at Information Technology University, Lahore.</p>
+            <p id="bio-2">I have been a part of Mindstrom Studios for the past 2 years.</p>
+            <p id="bio-3">I did my intermediate degree from Government College, Lahore.</p>
+            <p id="bio-4">I have been a part of many societies and have great experience in management and work.</p>
+            <p id="bio-5">My main hobbies include art/sketch art.</p>
+        </div>
+    </div>
 
-        <section id="degrees" class="degrees">
-            <nav>
-                <h2 id="degrees-title">Degrees</h2>
-            </nav>
-            <ul id="degrees-list">
-            <h3>- Bachelor of Science in Computer Science (2022-2026)</h3>
-            <h3>- Short Course on Game Development (2022-2024)</h3>
-            </ul>
-        </section>
+    <section id="skills" class="skills">
+        <nav>
+        <h2 id="skills-title">Skills</h2>
+        </nav>
+        <h3 id="soft-skills-title" onclick="OW('SoftSkills.html')">- Soft Skills</h3>
+        <h3 id="hard-skills-title" onclick="OW('HardSkils.html')">- Hard Skills</h3>
+    </section>
 
-        <section id="awards" class="awards">
-            <nav>
-            <h2 id="awards-title">Awards & Hackathons</h2>
-            </nav>
-            <ul id="awards-list">
-            <h3 id="GameCef" title="Game Development certificates" onclicl="OW('GameCef.html')">- Game Dev (2023-24)</li>
-            <h3 id="Hack" tiltle="Hackathon certificates" onclick="OW('Hack.html')">- Hackathon (2023)</li>
-            </ul>
-        </section>
+    <section id="projects" class="projects">
+        <nav>
+        <h2 id="projects-title">Projects</h2>
+        </nav>
+        <h3 id="db-project-title" onclick="OW('DBProject.html')">- Database Project</h3>
+        <h3 id="game-dev-project-title" onclick="OW('GameDev.html')">- Game Development Projects</h3>
+    </section>
 
-        <section class="social-media-feed">
-            <nav>
-                <h2>Social Media Feed</h2>
-            </nav>
-            <a href="https://www.instagram.com/ahmed._mughal22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                <h3>
-                    <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
-                    Instagram main page
-                </h3>
-            </a>
-            <a href="https://www.instagram.com/banned.artist?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                <h3>
-                    <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
-                    Instagram art page
-                </h3>
-            </a>
-            <a href="#" target="_blank">
-                <h3 title="bscs22070@itu.edu.pk">
-                    <img src="google.png" alt="Instagram" style="width: 20px; height: auto;" style="gap: 10px;">
-                    e-mail
-                </h3>
-            </a>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/YourProfilePage&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="no" frameborder="0"></iframe>
-        </section>
+    <section id="degrees" class="degrees">
+        <nav>
+        <h2 id="degrees-title">Degrees</h2>
+    </nav>
+        <ul id="degrees-list">
+            <h3>
+            <li id="bachelor-degree">- Bachelor of Science in Computer Science (2022-2026)</li>
+            <li id="short-course">- Short Course on Game Development (2022-2024)</li>
+            </h3>
+        </ul>
+    </section>
 
-    </body>  
+    <section id="awards" class="awards">
+        <nav>
+        <h2 id="awards-title">Awards & Hackathons</h2>
+        </nav>
+        <ul id="awards-list">
+            <h3 onclick="OW('GameCef.html')">
+            <li id="game-dev-cert">- Game Development (2023-24)</li>
+            </h3>
+            <h3 onclick="OW('Hack.html')">
+            <li id="hackathon-cert">- Hackathon (2023)</li>
+            </h3>
+        </ul>
+    </section>
+
+    <section class="social-media-feed">
+        <nav>
+        <h2 id="social-media-title">Social Media Feed</h2>
+        </nav>
+        <a href="https://www.instagram.com/ahmed._mughal22" target="_blank">
+            <h3>
+                <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
+                Instagram main page
+            </h3>
+        </a>
+        <a href="https://www.instagram.com/banned.artist" target="_blank">
+            <h3>
+                <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
+                Instagram art page
+            </h3>
+        </a>
+        <a href="mailto:bscs22070@itu.edu.pk">
+            <h3>
+                <img src="google.png" alt="Email" style="width: 20px; height: auto;">
+                E-mail
+            </h3>
+        </a>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/YourProfilePage&tabs=timeline&width=500&height=500" scrolling="no" frameborder="0"></iframe>
+    </section>
+
     <footer>
         <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
     </footer>
 
-
     <script>
         const translations = {
-        en: {
-            title: "Professional Profile",
-            skillsTitle: "Skills",
-            softSkillsTitle: "Soft Skills",
-            hardSkillsTitle: "Hard Skills",
-            projectsTitle: "Projects",
-            degreesTitle: "Degrees",
-            awardsTitle: "Awards & Hackathons",
-            direction: "ltr",
-            textAlign: "left"
-        },
-        ar: {
-            title: "الملف الشخصي المهني",
-            skillsTitle: "المهارات",
-            softSkillsTitle: "المهارات الشخصية",
-            hardSkillsTitle: "المهارات التقنية",
-            projectsTitle: "المشاريع",
-            degreesTitle: "الدرجات العلمية",
-            awardsTitle: "الجوائز والمسابقات",
-            direction: "rtl",
-            textAlign: "right"
-        },
-        ur: {
-            title: "پیشہ ورانہ پروفائل",
-            skillsTitle: "مہارتیں",
-            softSkillsTitle: "نرم مہارتیں",
-            hardSkillsTitle: "سخت مہارتیں",
-            projectsTitle: "پروجیکٹس",
-            degreesTitle: "ڈگریاں",
-            awardsTitle: "ایوارڈز اور ہیکاتھون",
-            direction: "rtl",
-            textAlign: "right"
-        },
-        fr: {
-            title: "Profil Professionnel",
-            skillsTitle: "Compétences",
-            softSkillsTitle: "Compétences Douces",
-            hardSkillsTitle: "Compétences Techniques",
-            projectsTitle: "Projets",
-            certificationsTitle: "Certifications",
-            degreesTitle: "Diplômes",
-            awardsTitle: "Récompenses & Hackathons",
-            direction: "ltr",
-            textAlign: "left"
-        }
+            en: {
+                title: "My Profile",
+                name: "Ahmed Khalid",
+                studentId: "Bscs22070",
+                bio1: "Student at Information Technology University, Lahore.",
+                bio2: "I have been a part of Mindstrom Studios for the past 2 years.",
+                bio3: "I did my intermediate degree from Government College, Lahore.",
+                bio4: "I have been a part of many societies and have great experience in management and work.",
+                bio5: "My main hobbies include art/sketch art.",
+                skillsTitle: "Skills",
+                softSkillsTitle: "Soft Skills",
+                hardSkillsTitle: "Hard Skills",
+                projectsTitle: "Projects",
+                dbProjectTitle: "Database Project",
+                gameDevProjectTitle: "Game Development Projects",
+                degreesTitle: "Degrees",
+                bachelorDegree: "Bachelor of Science in Computer Science (2022-2026)",
+                shortCourse: "Short Course on Game Development (2022-2024)",
+                awardsTitle: "Awards & Hackathons",
+                gameDevCert: "Game Development (2023-24)",
+                hackathonCert: "Hackathon (2023)",
+                socialMediaTitle: "Social Media Feed",
+                direction: "ltr",
+                textAlign: "left"
+            },
+            ar: {
+                title: "الملف الشخصي",
+                name: "أحمد خالد",
+                studentId: "Bscs22070",
+                bio1: "طالب في جامعة تكنولوجيا المعلومات، لاهور.",
+                bio2: "لقد كنت جزءًا من Mindstrom Studios على مدى العامين الماضيين.",
+                bio3: "حصلت على درجتي المتوسطة من كلية الحكومة، لاهور.",
+                bio4: "لقد كنت جزءًا من العديد من الجمعيات ولدي خبرة كبيرة في الإدارة والعمل.",
+                bio5: "تشمل هواياتي الرئيسية الرسم والفن.",
+                skillsTitle: "المهارات",
+                softSkillsTitle: "المهارات الشخصية",
+                hardSkillsTitle: "المهارات التقنية",
+                projectsTitle: "المشاريع",
+                dbProjectTitle: "مشروع قواعد البيانات",
+                gameDevProjectTitle: "مشاريع تطوير الألعاب",
+                degreesTitle: "الدرجات العلمية",
+                bachelorDegree: "بكالوريوس علوم الحاسوب (2022-2026)",
+                shortCourse: "دورة قصيرة في تطوير الألعاب (2022-2024)",
+                awardsTitle: "الجوائز والمسابقات",
+                gameDevCert: "تطوير الألعاب (2023-24)",
+                hackathonCert: "الهاكاثون (2023)",
+                socialMediaTitle: "التواصل الاجتماعي",
+                direction: "rtl",
+                textAlign: "right"
+            },
+            ur: {
+                title: "پروفائل",
+                name: "احمد خالد",
+                studentId: "Bscs22070",
+                bio1: "اطلاعاتی ٹیکنالوجی یونیورسٹی، لاہور میں طالب علم",
+                bio2: "میں گزشتہ 2 سالوں سے مائنڈسٹروم اسٹوڈیوز کا حصہ ہوں۔",
+                bio3: "میں نے گورنمنٹ کالج لاہور سے اپنی انٹرمیڈیٹ کی ڈگری حاصل کی۔",
+                bio4: "میں کئی سوسائٹیوں کا حصہ رہا ہوں اور مجھے انتظامیہ اور کام کا بہترین تجربہ حاصل ہے۔",
+                bio5: "میرے اہم مشاغل میں آرٹ/اسکیچ آرٹ شامل ہیں۔",
+                skillsTitle: "مہارتیں",
+                softSkillsTitle: "نرم مہارتیں",
+                hardSkillsTitle: "سخت مہارتیں",
+                projectsTitle: "پروجیکٹس",
+                dbProjectTitle: "ڈیٹا بیس پروجیکٹ",
+                gameDevProjectTitle: "گیم ڈیولپمنٹ پروجیکٹس",
+                degreesTitle: "ڈگریاں",
+                bachelorDegree: "بیچلر آف سائنس ان کمپیوٹر سائنس (2022-2026)",
+                shortCourse: "گیم ڈیولپمنٹ میں شارٹ کورس (2022-2024)",
+                awardsTitle: "ایوارڈز اور ہیکاتھون",
+                gameDevCert: "گیم ڈیولپمنٹ (2023-24)",
+                hackathonCert: "ہیکاتھون (2023)",
+                socialMediaTitle: "سوشل میڈیا فیڈ",
+                direction: "rtl",
+                textAlign: "right"
+            },
+            fr: {
+                title: "Mon Profil",
+                name: "Ahmed Khalid",
+                studentId: "Bscs22070",
+                bio1: "Étudiant à l'Université des Technologies de l'Information, Lahore.",
+                bio2: "Je fais partie de Mindstrom Studios depuis 2 ans.",
+                bio3: "J'ai obtenu mon diplôme intermédiaire du Government College, Lahore.",
+                bio4: "J'ai fait partie de nombreuses sociétés et j'ai une grande expérience en gestion et en travail.",
+                bio5: "Mes principaux passe-temps incluent l'art et le dessin.",
+                skillsTitle: "Compétences",
+                softSkillsTitle: "Compétences Douces",
+                hardSkillsTitle: "Compétences Techniques",
+                projectsTitle: "Projets",
+                dbProjectTitle: "Projet de Base de Données",
+                gameDevProjectTitle: "Projets de Développement de Jeux",
+                degreesTitle: "Diplômes",
+                bachelorDegree: "Licence en Informatique (2022-2026)",
+                shortCourse: "Cours de Développement de Jeux (2022-2024)",
+                awardsTitle: "Récompenses & Hackathons",
+                gameDevCert: "Développement de Jeux (2023-24)",
+                hackathonCert: "Hackathon (2023)",
+                socialMediaTitle: "Flux des Médias Sociaux",
+                direction: "ltr",
+                textAlign: "left"
+            }
         };
 
         function changeLanguage(language) {
-        document.getElementById('title').innerText = translations[language].title;
-        document.getElementById('skills-title').innerText = translations[language].skillsTitle;
-        document.getElementById('soft-skills-title').innerText = translations[language].softSkillsTitle;
-        document.getElementById('hard-skills-title').innerText = translations[language].hardSkillsTitle;
-        document.getElementById('projects-title').innerText = translations[language].projectsTitle;
-        document.getElementById('degrees-title').innerText = translations[language].degreesTitle;
-        document.getElementById('awards-title').innerText = translations[language].awardsTitle;
+            document.getElementById('title').innerText = translations[language].title;
+            document.getElementById('name').innerText = translations[language].name;
+            document.getElementById('student-id').innerText = translations[language].studentId;
+            document.getElementById('bio-1').innerText = translations[language].bio1;
+            document.getElementById('bio-2').innerText = translations[language].bio2;
+            document.getElementById('bio-3').innerText = translations[language].bio3;
+            document.getElementById('bio-4').innerText = translations[language].bio4;
+            document.getElementById('bio-5').innerText = translations[language].bio5;
+            document.getElementById('skills-title').innerText = translations[language].skillsTitle;
+            document.getElementById('soft-skills-title').innerText = translations[language].softSkillsTitle;
+            document.getElementById('hard-skills-title').innerText = translations[language].hardSkillsTitle;
+            document.getElementById('projects-title').innerText = translations[language].projectsTitle;
+            document.getElementById('db-project-title').innerText = translations[language].dbProjectTitle;
+            document.getElementById('game-dev-project-title').innerText = translations[language].gameDevProjectTitle;
+            document.getElementById('degrees-title').innerText = translations[language].degreesTitle;
+            document.getElementById('bachelor-degree').innerText = translations[language].bachelorDegree;
+            document.getElementById('short-course').innerText = translations[language].shortCourse;
+            document.getElementById('awards-title').innerText = translations[language].awardsTitle;
+            document.getElementById('game-dev-cert').innerText = translations[language].gameDevCert;
+            document.getElementById('hackathon-cert').innerText = translations[language].hackathonCert;
+            document.getElementById('social-media-title').innerText = translations[language].socialMediaTitle;
 
-        document.body.style.direction = translations[language].direction;
-        document.body.style.textAlign = translations[language].textAlign;
+            document.body.style.direction = translations[language].direction;
+            document.body.style.textAlign = translations[language].textAlign;
         }
 
-        function OW(name)
-        {
-            window.location.href=name;
+        function OW(name) {
+            window.location.href = name;
         }
-
     </script>
-
+</body>
 </html>
