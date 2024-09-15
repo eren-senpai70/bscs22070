@@ -1,263 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
-  <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
-  <meta name="author" content="Your Name">
-  <title>Professional Profile</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
+        <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
+        <meta name="author" content="Your Name">
+        <title>Professional Profile</title>
+        <style>
+            /* Basic Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-      text-align: left;
-      direction: ltr;
-      background-color: #c4bebe;
-    }
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                padding: 20px;
+                text-align: left;
+                direction: ltr;
+                background-color: #c4bebe;
+            }
 
-    nav {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
+            nav {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
 
-    nav ul {
-      list-style: none;
-    }
+            nav ul {
+                list-style: none;
+            }
 
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
+            nav ul li {
+                display: inline;
+                margin: 0 15px;
+            }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+            }
 
-    section, header, footer {
-      margin: 20px 0;
-    }
+            section, header, footer {
+                margin: 20px 0;
+            }
 
-    h1 {
-      color: #858585;
-      text-align: center;
-    }
+            h1 {
+                color: #4e4e4e;
+                text-align: center;
+            }
 
-    h2{
-        text-decoration: underline;
-    }
-    h3{
-        cursor: pointer;
-        
-    }
-    h3:hover{
-        text-decoration: underline;
-    }
+            h2{
+                text-decoration: underline;
+            }
+            h3{
+                cursor: pointer;
+                text-align: center;
+                margin-top: 5px;
+            }
+            h3:hover{
+                text-decoration: underline;
+            }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
+            .container {
+                max-width: 1200px;
+                margin: auto;
+            }
 
-    .languages {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+            .languages {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
 
-    .languages button {
-      margin: 0 10px;
-      padding: 10px;
-      background-color: #444;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+            .languages button {
+                margin: 0 10px;
+                padding: 10px;
+                background-color: #444;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
 
-    .languages button:hover {
-      background-color: #666;
-    }
+            .languages button:hover {
+                background-color: #666;
+            }
 
-    .skills ul, .projects ul, .certifications ul, .degrees ul, .awards ul {
-      list-style: none;
-    }
+            .skills ul, .projects ul, .certifications ul, .degrees ul, .awards ul {
+                list-style: none;
+            }
 
-    .projects ul li, .certifications ul li, .degrees ul li, .awards ul li {
-      margin-bottom: 15px;
-    }
+            .projects ul li, .certifications ul li, .degrees ul li, .awards ul li {
+                margin-bottom: 15px;
+            }
 
-    .social-media-feed {
-      margin-bottom: 20px;
-    }
+            .social-media-feed {
+                margin-bottom: 20px;
+            }
 
-    .social-media-feed iframe {
-      width: 100%;
-      height: 400px;
-    }
+            .social-media-feed iframe {
+                width: 100%;
+                height: 400px;
+            }
 
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #f4f4f4;
-    }
+            footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #f4f4f4;
+            }
 
 
+            
+        </style>
+    </head>
+
+
+    <body>
+        <nav>
+            <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#degrees">Degrees</a></li>
+            <li><a href="#awards">Awards</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1 id="title">My Profile</h1>
+            <div class="languages">
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('ar')">عربي</button>
+            <button onclick="changeLanguage('ur')">اردو</button>
+            <button onclick="changeLanguage('fr')">Français</button>
+                </div>
+        </header>
+        <div style="display: flex; align-items: center; justify-content: left; gap: 10px;">
+            <div>
+            <img src="Ahmed.jpg" alt="Your Picture" style="width: 200px; height: auto;">
+            </div>
+            
+            <div>
+                <h2>Ahmed Khalid</h2>
+                <h2>Bscs22070</h2>
+                <p>
+                    Student at Information Technology University, Lahore.
+                </p>
+                <p>
+                    I have been a part of Mindstrom Studios for the past 2 years.
+                </p>
+                <p>
+                    I did my intermediate degree from Government College, Lahore.
+                </p>
+                <p>
+                    I have been a part of many societies and have a great experince in management and work.
+                </p>
+                <p>
+                    My main hobbies include art/sketch art.
+                </p>
+            </div>
+        </div>
     
-  </style>
-</head>
+        <section id="skills" class="skills">
+            <nav>
+                <h2 id="skills-title">Skills</h2>
+            </nav>
+            <h3 id="soft-skills-title" title="Soft skills" onclick="OW('SoftSkills.html')">- Soft Skills</h3>
+            <h3 id="hard-skills-title" title="Hard skills" onclick="OW('HardSkils.html')">- Hard Skills</h3>
+        </section>
+
+        <section id="projects" class="projects"> 
+            <nav>
+                <h2 id="projects-title">Projects</h2>
+            </nav>
+            <h3 id="soft-skills-title" title="DB Projects" onclick="OW('DBProject.html')">- DataBase Project</h3>
+            <h3 id="hard-skills-title" title="Game Dev Projects" onclick="OW('GameDev.html')">- Game Dev Prjects</h3>
+            
+        </section>
+
+        <section id="degrees" class="degrees">
+            <nav>
+                <h2 id="degrees-title">Degrees</h2>
+            </nav>
+            <ul id="degrees-list">
+            <h3>- Bachelor of Science in Computer Science (2022-2026)</h3>
+            <h3>- Short Course on Game Development (2022-2024)</h3>
+            </ul>
+        </section>
+
+        <section id="awards" class="awards">
+            <nav>
+            <h2 id="awards-title">Awards & Hackathons</h2>
+            </nav>
+            <ul id="awards-list">
+            <h3 id="GameCef" title="Game Development certificates" onclicl="OW('GameCef.html')">- Game Dev (2023-24)</li>
+            <h3 id="Hack" tiltle="Hackathon certificates" onclick="OW('Hack.html')">- Hackathon (2023)</li>
+            </ul>
+        </section>
+
+        <section class="social-media-feed">
+            <nav>
+                <h2>Social Media Feed</h2>
+            </nav>
+            <a href="https://www.instagram.com/ahmed._mughal22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <h3>
+                    <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
+                    Instagram main page
+                </h3>
+            </a>
+            <a href="https://www.instagram.com/banned.artist?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <h3>
+                    <img src="insta.png" alt="Instagram" style="width: 20px; height: auto;">
+                    Instagram art page
+                </h3>
+            </a>
+            <a href="#" target="_blank">
+                <h3 title="bscs22070@itu.edu.pk">
+                    <img src="google.png" alt="Instagram" style="width: 20px; height: auto;" style="gap: 10px;">
+                    e-mail
+                </h3>
+            </a>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/YourProfilePage&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="no" frameborder="0"></iframe>
+        </section>
+
+    </body>  
+    <footer>
+        <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
+    </footer>
 
 
-<body>
-  <nav>
-    <ul>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#degrees">Degrees</a></li>
-      <li><a href="#awards">Awards</a></li>
-    </ul>
-  </nav>
+    <script>
+        const translations = {
+        en: {
+            title: "Professional Profile",
+            skillsTitle: "Skills",
+            softSkillsTitle: "Soft Skills",
+            hardSkillsTitle: "Hard Skills",
+            projectsTitle: "Projects",
+            degreesTitle: "Degrees",
+            awardsTitle: "Awards & Hackathons",
+            direction: "ltr",
+            textAlign: "left"
+        },
+        ar: {
+            title: "الملف الشخصي المهني",
+            skillsTitle: "المهارات",
+            softSkillsTitle: "المهارات الشخصية",
+            hardSkillsTitle: "المهارات التقنية",
+            projectsTitle: "المشاريع",
+            degreesTitle: "الدرجات العلمية",
+            awardsTitle: "الجوائز والمسابقات",
+            direction: "rtl",
+            textAlign: "right"
+        },
+        ur: {
+            title: "پیشہ ورانہ پروفائل",
+            skillsTitle: "مہارتیں",
+            softSkillsTitle: "نرم مہارتیں",
+            hardSkillsTitle: "سخت مہارتیں",
+            projectsTitle: "پروجیکٹس",
+            degreesTitle: "ڈگریاں",
+            awardsTitle: "ایوارڈز اور ہیکاتھون",
+            direction: "rtl",
+            textAlign: "right"
+        },
+        fr: {
+            title: "Profil Professionnel",
+            skillsTitle: "Compétences",
+            softSkillsTitle: "Compétences Douces",
+            hardSkillsTitle: "Compétences Techniques",
+            projectsTitle: "Projets",
+            certificationsTitle: "Certifications",
+            degreesTitle: "Diplômes",
+            awardsTitle: "Récompenses & Hackathons",
+            direction: "ltr",
+            textAlign: "left"
+        }
+        };
 
-  <header>
-    <h1 id="title">My Profile</h1>
-    <div class="languages">
-      <button onclick="changeLanguage('en')">English</button>
-      <button onclick="changeLanguage('ar')">عربي</button>
-      <button onclick="changeLanguage('ur')">اردو</button>
-      <button onclick="changeLanguage('fr')">Français</button>
-    </div>
-  </header>
-  
-  <section id="skills" class="skills">
-    <h2 id="skills-title">Skills</h2>
-    <h3 id="soft-skills-title" title="Soft skills" onclick="OW('SoftSkills.html')">- Soft Skills</h3>
-    <h3 id="hard-skills-title" title="Hard skills" onclick="OW('HardSkils.html')">- Hard Skills</h3>
-  </section>
+        function changeLanguage(language) {
+        document.getElementById('title').innerText = translations[language].title;
+        document.getElementById('skills-title').innerText = translations[language].skillsTitle;
+        document.getElementById('soft-skills-title').innerText = translations[language].softSkillsTitle;
+        document.getElementById('hard-skills-title').innerText = translations[language].hardSkillsTitle;
+        document.getElementById('projects-title').innerText = translations[language].projectsTitle;
+        document.getElementById('degrees-title').innerText = translations[language].degreesTitle;
+        document.getElementById('awards-title').innerText = translations[language].awardsTitle;
 
-  <section id="projects" class="projects">
-    <h2 id="projects-title">Projects</h2>
-    <h3 id="soft-skills-title" title="DB Projects" onclick="OW('DBP.html')">- DataBase Project</h3>
-    <h3 id="hard-skills-title" title="Game Dev Projects" onclick="OW('GameDev.html')">- Game Dev Prjects</h3>
-    
-  </section>
+        document.body.style.direction = translations[language].direction;
+        document.body.style.textAlign = translations[language].textAlign;
+        }
 
-  <section id="degrees" class="degrees">
-    <h2 id="degrees-title">Degrees</h2>
-    <ul id="degrees-list">
-      <h3>- Bachelor of Science in Computer Science (2022-2026)</h3h3>
-      <h3>- Short Course on Game Development (2022-2024)</h3>
-    </ul>
-  </section>
+        function OW(name)
+        {
+            window.location.href=name;
+        }
 
-  <section id="awards" class="awards">
-    <h2 id="awards-title">Awards & Hackathons</h2>
-    <ul id="awards-list">
-      <li>1st Place in National Hackathon (2023)</li>
-      <li>Best Innovator Award (2022)</li>
-    </ul>
-  </section>
-
-  <section class="social-media-feed">
-    <h2>Social Media Feed</h2>
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/YourProfilePage&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="no" frameborder="0"></iframe>
-  </section>
-
-</body>  
-<footer>
-    <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
-  </footer>
-
-
-<script>
-    const translations = {
-      en: {
-        title: "Professional Profile",
-        skillsTitle: "Skills",
-        softSkillsTitle: "Soft Skills",
-        hardSkillsTitle: "Hard Skills",
-        projectsTitle: "Projects",
-        certificationsTitle: "Certifications",
-        degreesTitle: "Degrees",
-        awardsTitle: "Awards & Hackathons",
-        videoTitle: "Featured Video",
-        direction: "ltr", // left-to-right
-        textAlign: "left"
-      },
-      ar: {
-        title: "الملف الشخصي المهني",
-        skillsTitle: "المهارات",
-        softSkillsTitle: "المهارات الشخصية",
-        hardSkillsTitle: "المهارات التقنية",
-        projectsTitle: "المشاريع",
-        certificationsTitle: "الشهادات",
-        degreesTitle: "الدرجات العلمية",
-        awardsTitle: "الجوائز والمسابقات",
-        videoTitle: "فيديو مميز",
-        direction: "rtl", // right-to-left
-        textAlign: "right"
-      },
-      ur: {
-        title: "پیشہ ورانہ پروفائل",
-        skillsTitle: "مہارتیں",
-        softSkillsTitle: "نرم مہارتیں",
-        hardSkillsTitle: "سخت مہارتیں",
-        projectsTitle: "پروجیکٹس",
-        certificationsTitle: "سرٹیفیکیشنز",
-        degreesTitle: "ڈگریاں",
-        awardsTitle: "ایوارڈز اور ہیکاتھون",
-        videoTitle: "نمایاں ویڈیو",
-        direction: "rtl", // right-to-left
-        textAlign: "right"
-      },
-      fr: {
-        title: "Profil Professionnel",
-        skillsTitle: "Compétences",
-        softSkillsTitle: "Compétences Douces",
-        hardSkillsTitle: "Compétences Techniques",
-        projectsTitle: "Projets",
-        certificationsTitle: "Certifications",
-        degreesTitle: "Diplômes",
-        awardsTitle: "Récompenses & Hackathons",
-        videoTitle: "Vidéo en Vedette",
-        direction: "ltr", // left-to-right
-        textAlign: "left"
-      }
-    };
-
-    function changeLanguage(language) {
-      document.getElementById('title').innerText = translations[language].title;
-      document.getElementById('skills-title').innerText = translations[language].skillsTitle;
-      document.getElementById('soft-skills-title').innerText = translations[language].softSkillsTitle;
-      document.getElementById('hard-skills-title').innerText = translations[language].hardSkillsTitle;
-      document.getElementById('projects-title').innerText = translations[language].projectsTitle;
-      document.getElementById('certifications-title').innerText = translations[language].certificationsTitle;
-      document.getElementById('degrees-title').innerText = translations[language].degreesTitle;
-      document.getElementById('awards-title').innerText = translations[language].awardsTitle;
-      document.getElementById('video-title').innerText = translations[language].videoTitle;
-
-      // Change text alignment and direction
-      document.body.style.direction = translations[language].direction;
-      document.body.style.textAlign = translations[language].textAlign;
-    }
-
-    function OW(name)
-    {
-        window.location.href=name;
-    }
-
-  </script>
+    </script>
 
 </html>
