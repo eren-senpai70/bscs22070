@@ -22,7 +22,7 @@
       padding: 20px;
       text-align: left;
       direction: ltr;
-      background-color: #181717;
+      background-color: #c4bebe;
     }
 
     nav {
@@ -56,6 +56,17 @@
       text-align: center;
     }
 
+    h2{
+        text-decoration: underline;
+    }
+    h3{
+        cursor: pointer;
+        
+    }
+    h3:hover{
+        text-decoration: underline;
+    }
+
     .container {
       max-width: 1200px;
       margin: auto;
@@ -80,9 +91,34 @@
       background-color: #666;
     }
 
+    .skills ul, .projects ul, .certifications ul, .degrees ul, .awards ul {
+      list-style: none;
+    }
+
+    .projects ul li, .certifications ul li, .degrees ul li, .awards ul li {
+      margin-bottom: 15px;
+    }
+
+    .social-media-feed {
+      margin-bottom: 20px;
+    }
+
+    .social-media-feed iframe {
+      width: 100%;
+      height: 400px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+
+
     
   </style>
 </head>
+
 
 <body>
   <nav>
@@ -104,6 +140,124 @@
       <button onclick="changeLanguage('fr')">Français</button>
     </div>
   </header>
-</body>
+  
+  <section id="skills" class="skills">
+    <h2 id="skills-title">Skills</h2>
+    <h3 id="soft-skills-title" title="Soft skills" onclick="OW('SoftSkills.html')">- Soft Skills</h3>
+    <h3 id="hard-skills-title" title="Hard skills" onclick="OW('HardSkils.html')">- Hard Skills</h3>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 id="projects-title">Projects</h2>
+    <h3 id="soft-skills-title" title="DB Projects" onclick="OW('DBP.html')">- DataBase Project</h3>
+    <h3 id="hard-skills-title" title="Game Dev Projects" onclick="OW('GameDev.html')">- Game Dev Prjects</h3>
+    
+  </section>
+
+  <section id="degrees" class="degrees">
+    <h2 id="degrees-title">Degrees</h2>
+    <ul id="degrees-list">
+      <h3>- Bachelor of Science in Computer Science (2022-2026)</h3h3>
+      <h3>- Short Course on Game Development (2022-2024)</h3>
+    </ul>
+  </section>
+
+  <section id="awards" class="awards">
+    <h2 id="awards-title">Awards & Hackathons</h2>
+    <ul id="awards-list">
+      <li>1st Place in National Hackathon (2023)</li>
+      <li>Best Innovator Award (2022)</li>
+    </ul>
+  </section>
+
+  <section class="social-media-feed">
+    <h2>Social Media Feed</h2>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/YourProfilePage&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="no" frameborder="0"></iframe>
+  </section>
+
+</body>  
+<footer>
+    <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
+  </footer>
+
+
+<script>
+    const translations = {
+      en: {
+        title: "Professional Profile",
+        skillsTitle: "Skills",
+        softSkillsTitle: "Soft Skills",
+        hardSkillsTitle: "Hard Skills",
+        projectsTitle: "Projects",
+        certificationsTitle: "Certifications",
+        degreesTitle: "Degrees",
+        awardsTitle: "Awards & Hackathons",
+        videoTitle: "Featured Video",
+        direction: "ltr", // left-to-right
+        textAlign: "left"
+      },
+      ar: {
+        title: "الملف الشخصي المهني",
+        skillsTitle: "المهارات",
+        softSkillsTitle: "المهارات الشخصية",
+        hardSkillsTitle: "المهارات التقنية",
+        projectsTitle: "المشاريع",
+        certificationsTitle: "الشهادات",
+        degreesTitle: "الدرجات العلمية",
+        awardsTitle: "الجوائز والمسابقات",
+        videoTitle: "فيديو مميز",
+        direction: "rtl", // right-to-left
+        textAlign: "right"
+      },
+      ur: {
+        title: "پیشہ ورانہ پروفائل",
+        skillsTitle: "مہارتیں",
+        softSkillsTitle: "نرم مہارتیں",
+        hardSkillsTitle: "سخت مہارتیں",
+        projectsTitle: "پروجیکٹس",
+        certificationsTitle: "سرٹیفیکیشنز",
+        degreesTitle: "ڈگریاں",
+        awardsTitle: "ایوارڈز اور ہیکاتھون",
+        videoTitle: "نمایاں ویڈیو",
+        direction: "rtl", // right-to-left
+        textAlign: "right"
+      },
+      fr: {
+        title: "Profil Professionnel",
+        skillsTitle: "Compétences",
+        softSkillsTitle: "Compétences Douces",
+        hardSkillsTitle: "Compétences Techniques",
+        projectsTitle: "Projets",
+        certificationsTitle: "Certifications",
+        degreesTitle: "Diplômes",
+        awardsTitle: "Récompenses & Hackathons",
+        videoTitle: "Vidéo en Vedette",
+        direction: "ltr", // left-to-right
+        textAlign: "left"
+      }
+    };
+
+    function changeLanguage(language) {
+      document.getElementById('title').innerText = translations[language].title;
+      document.getElementById('skills-title').innerText = translations[language].skillsTitle;
+      document.getElementById('soft-skills-title').innerText = translations[language].softSkillsTitle;
+      document.getElementById('hard-skills-title').innerText = translations[language].hardSkillsTitle;
+      document.getElementById('projects-title').innerText = translations[language].projectsTitle;
+      document.getElementById('certifications-title').innerText = translations[language].certificationsTitle;
+      document.getElementById('degrees-title').innerText = translations[language].degreesTitle;
+      document.getElementById('awards-title').innerText = translations[language].awardsTitle;
+      document.getElementById('video-title').innerText = translations[language].videoTitle;
+
+      // Change text alignment and direction
+      document.body.style.direction = translations[language].direction;
+      document.body.style.textAlign = translations[language].textAlign;
+    }
+
+    function OW(name)
+    {
+        window.location.href=name;
+    }
+
+  </script>
 
 </html>
