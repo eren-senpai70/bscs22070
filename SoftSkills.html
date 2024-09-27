@@ -29,31 +29,54 @@
         }
 
         nav {
-            width: 2000px;
-            height: 200px;
-            background-color: #333;
-            padding: 100px;
-            border-radius: 20px;
-            text-align: center;
-            color: #c4bebe;
-        }
+    width: 550px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 20px;
+    text-align: center;
+    color: #c4bebe;
+
+    position: fixed;
+    top: 150;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;    
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 10px 20px;
+}
+
+
+
 
     </style>
 
     <body>
         <div>
-        <h1 title="Soft Skills">Soft Skills</h1>
+        <h1 title="Soft Skills" style="text-decoration: underline;">Soft Skills</h1>
         </div>
         <div class="container">
             <nav>
-                <br>Python</br>
-                <br>C++</br>
-                <br>C#</br>
-                <br>Java Script</br>
-                <br>HTML</br>
-                <br>CSS</br>
-                <br>C (Socket Programming)</br>
+                <ul>
+                    <li><b>Communication</b></li>
+                    <li><b>Problem Solving</b></li>
+                    <li><b>Team leading</b></li>
+                </ul>
             </nav>
+            
         </div>
     </body>
 
