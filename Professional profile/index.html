@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing projects, skills, certifications, and more.">
+    <meta name="keywords" content="portfolio, web developer, projects, certifications, awards, skills">
+    
+    <title>Professional Portfolio</title>
+
+    <!-- Google Fonts for stylish text -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons for social media -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Font Awesome CDN Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Style for layout, animations, and colors -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #bcc0c7;
+            color: #333;
+        }
+
+        h1,h2, h3 {
+            color: #ff5e57;
+        }
+
+        h2{
+            text-decoration: underline;
+        }
+
+        p, li {
+            color: #ffffff;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .menu a, nav .dropdown-btn {
+            color: rgb(0, 0, 0);
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .menu a:hover, nav .dropdown-btn:hover {
+            background-color: #ff5e57;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Dropdown Menu for Languages inside Hamburger */
+        .menu .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-align: right;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff5e57;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Responsive Menu for Mobile */
+        @media (max-width: 768px) {
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 99;
+            }
+
+            nav .mobile-menu-icon {
+                display: block;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 0;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+        }
+
+        .section h2 {
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Social Media Icons */
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff5e57;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-pic img {
+    border: 3px solid;
+}
+
+.name h2 {
+    margin-top: 15px;
+    color: #ff5e57;
+}
+
+/* Skills Section - Remove Bullet Points */
+.skill ul {
+    list-style-type: none;
+    padding-left: 0; /* Remove left padding to align with other text */
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu" id="menu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+
+            <!-- Dropdown for Language -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Languages</button>
+                <div class="dropdown-content">
+                    <a onclick="changeLanguage('en')">English</a>
+                    <a onclick="changeLanguage('ar')">Arabic</a>
+                    <a onclick="changeLanguage('ur')">Urdu</a>
+                    <a onclick="changeLanguage('fr')">French</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+<section id="about" class="section">
+    <h2 id="welcome-message">Welcome to My Professional Portfolio</h2>
+    <div class="intro-content">
+        <div class="profile-pic">
+            <img src="Ahmed Khalid.jpg" alt="Ahmed Khalid" style="width: 200px; height: auto; border-radius: 50%;">
+        </div>
+        <div class="name">
+            <h1>Ahmed Khalid</h1>
+        </div>
+    </div>
+    <p id="intro">Web Developer/Game Developer/Programmer/Artist.</p>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills-container">
+            <div class="skill soft-skill">
+                <h3 id="soft-skills-heading">Soft Skills</h3>
+                <ul>
+                    <li id="communication-skill">Communication</li>
+                    <li id="teamwork-skill">Teamwork</li>
+                    <li id="problem-solving-skill">Problem Solving</li>
+                </ul>
+            </div>
+            <div class="skill hard-skill">
+                <h3 id="hard-skills-heading">Hard Skills</h3>
+                <ul>
+                    <li id="js-skill">JavaScript</li>
+                    <li id="html-css-skill">HTML & CSS</li>
+                    <li id="react-skill">React.js</li>
+                    <li id="python-skill">Python</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <h3 id="project1-name">Project Name</h3>
+                <p id="project1-date">Completed: June 2024</p>
+                <p id="project1-desc">A web application designed to...</p>
+            </div>
+            <div class="project">
+                <h3 id="project2-name">Another Project</h3>
+                <p id="project2-date">Completed: March 2024</p>
+                <p id="project2-desc">A mobile-friendly app that...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications, Awards, and Training -->
+    <section id="certifications" class="section">
+        <h2 id="certifications-heading">Certifications, Awards & Trainings</h2>
+        <div class="certifications-container">
+            <div class="certification">
+                <h3 id="certification1-name">Certified Web Developer</h3>
+                <p id="certification1-date">Issued by: XYZ Institute | Date: May 2023</p>
+            </div>
+            <div class="award">
+                <h3 id="award1-name">Best Developer Award</h3>
+                <p id="award1-date">Received: September 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Social Media Links -->
+    <section id="contact" class="section">
+        <h2 id="contact-heading">Connect With Me</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmed-khalid-499568266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/eren-senpai70"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/ahmed._mughal22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Language Change -->
+    <script>
+        const translations = {
+            en: {
+                welcomeMessage: "Welcome to My Professional Portfolio",
+                intro: "I am a passionate developer with expertise in web development and a diverse skill set.",
+                videoHeading: "Watch My Introduction",
+                skillsHeading: "Skills",
+                softSkillsHeading: "Soft Skills",
+                hardSkillsHeading: "Hard Skills",
+                communicationSkill: "Communication",
+                teamworkSkill: "Teamwork",
+                problemSolvingSkill: "Problem Solving",
+                jsSkill: "JavaScript",
+                htmlCssSkill: "HTML & CSS",
+                reactSkill: "React.js",
+                pythonSkill: "Python",
+                projectsHeading: "Projects",
+                project1Name: "Project Name",
+                project1Date: "Completed: June 2024",
+                project1Desc: "A web application designed to...",
+                project2Name: "Another Project",
+                project2Date: "Completed: March 2024",
+                project2Desc: "A mobile-friendly app that...",
+                certificationsHeading: "Certifications, Awards & Trainings",
+                certification1Name: "Certified Web Developer",
+                certification1Date: "Issued by: XYZ Institute | Date: May 2023",
+                award1Name: "Best Developer Award",
+                award1Date: "Received: September 2022",
+                contactHeading: "Connect With Me"
+            },
+            ar: {
+                welcomeMessage: "مرحبًا بكم في محفظتي المهنية",
+                intro: "أنا مطور شغوف بخبرة في تطوير الويب ومجموعة مهارات متنوعة.",
+                videoHeading: "شاهد مقدمة",
+                skillsHeading: "المهارات",
+                softSkillsHeading: "المهارات الشخصية",
+                hardSkillsHeading: "المهارات التقنية",
+                communicationSkill: "الاتصال",
+                teamworkSkill: "العمل الجماعي",
+                problemSolvingSkill: "حل المشكلات",
+                jsSkill: "جافا سكريبت",
+                htmlCssSkill: "HTML و CSS",
+                reactSkill: "React.js",
+                pythonSkill: "بايثون",
+                projectsHeading: "المشاريع",
+                project1Name: "اسم المشروع",
+                project1Date: "أكمل: يونيو 2024",
+                project1Desc: "تطبيق ويب مصمم ل...",
+                project2Name: "مشروع آخر",
+                project2Date: "أكمل: مارس 2024",
+                project2Desc: "تطبيق سهل الاستخدام على الأجهزة المحمولة...",
+                certificationsHeading: "الشهادات والجوائز والتدريبات",
+                certification1Name: "مطور ويب معتمد",
+                certification1Date: "صدر عن: معهد XYZ | التاريخ: مايو 2023",
+                award1Name: "أفضل مطور",
+                award1Date: "تلقى: سبتمبر 2022",
+                contactHeading: "تواصل معي"
+            },
+            ur: {
+                welcomeMessage: "میری پروفیشنل پورٹ فولیو میں خوش آمدید",
+                intro: "میں ایک پرجوش ڈویلپر ہوں جس میں ویب ڈویلپمنٹ کی مہارتیں ہیں۔",
+                videoHeading: "میری تعارف ویڈیو دیکھیں",
+                skillsHeading: "مہارتیں",
+                softSkillsHeading: "سوفٹ اسکلز",
+                hardSkillsHeading: "ہارڈ اسکلز",
+                communicationSkill: "کمیونیکیشن",
+                teamworkSkill: "ٹیم ورک",
+                problemSolvingSkill: "مسئلہ حل کرنا",
+                jsSkill: "جاوا اسکرپٹ",
+                htmlCssSkill: "HTML اور CSS",
+                reactSkill: "React.js",
+                pythonSkill: "پائتھون",
+                projectsHeading: "پروجیکٹس",
+                project1Name: "پروجیکٹ کا نام",
+                project1Date: "مکمل ہوا: جون 2024",
+                project1Desc: "ایک ویب ایپلیکیشن جو ڈیزائن کیا گیا ہے...",
+                project2Name: "ایک اور پروجیکٹ",
+                project2Date: "مکمل ہوا: مارچ 2024",
+                project2Desc: "ایک موبائل دوستانہ ایپ جو...",
+                certificationsHeading: "سرٹیفیکیشنز، ایوارڈز اور ٹریننگ",
+                certification1Name: "سرٹیفائیڈ ویب ڈویلپر",
+                certification1Date: "جاری کردہ: XYZ انسٹی ٹیوٹ | تاریخ: مئی 2023",
+                award1Name: "بہترین ڈویلپر ایوارڈ",
+                award1Date: "موصول ہوا: ستمبر 2022",
+                contactHeading: "مجھ سے رابطہ کریں"
+            },
+            fr: {
+                welcomeMessage: "Bienvenue dans Mon Portfolio Professionnel",
+                intro: "Je suis un développeur passionné avec une expertise en développement web et un ensemble de compétences diversifié.",
+                videoHeading: "Regardez Ma Présentation",
+                skillsHeading: "Compétences",
+                softSkillsHeading: "Compétences Douces",
+                hardSkillsHeading: "Compétences Techniques",
+                communicationSkill: "Communication",
+                teamworkSkill: "Travail d'équipe",
+                problemSolvingSkill: "Résolution de Problèmes",
+                jsSkill: "JavaScript",
+                htmlCssSkill: "HTML & CSS",
+                reactSkill: "React.js",
+                pythonSkill: "Python",
+                projectsHeading: "Projets",
+                project1Name: "Nom du Projet",
+                project1Date: "Complété: Juin 2024",
+                project1Desc: "Une application web conçue pour...",
+                project2Name: "Un autre Projet",
+                project2Date: "Complété: Mars 2024",
+                project2Desc: "Une application mobile conviviale qui...",
+                certificationsHeading: "Certifications, Récompenses & Formations",
+                certification1Name: "Développeur Web Certifié",
+                certification1Date: "Délivré par : Institut XYZ | Date : Mai 2023",
+                award1Name: "Meilleur Développeur",
+                award1Date: "Reçu : Septembre 2022",
+                contactHeading: "Connectez-Vous Avec Moi"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = {
+                welcomeMessage: document.getElementById('welcome-message'),
+                intro: document.getElementById('intro'),
+                videoHeading: document.getElementById('video-heading'),
+                skillsHeading: document.getElementById('skills-heading'),
+                softSkillsHeading: document.getElementById('soft-skills-heading'),
+                hardSkillsHeading: document.getElementById('hard-skills-heading'),
+                communicationSkill: document.getElementById('communication-skill'),
+                teamworkSkill: document.getElementById('teamwork-skill'),
+                problemSolvingSkill: document.getElementById('problem-solving-skill'),
+                jsSkill: document.getElementById('js-skill'),
+                htmlCssSkill: document.getElementById('html-css-skill'),
+                reactSkill: document.getElementById('react-skill'),
+                pythonSkill: document.getElementById('python-skill'),
+                projectsHeading: document.getElementById('projects-heading'),
+                project1Name: document.getElementById('project1-name'),
+                project1Date: document.getElementById('project1-date'),
+                project1Desc: document.getElementById('project1-desc'),
+                project2Name: document.getElementById('project2-name'),
+                project2Date: document.getElementById('project2-date'),
+                project2Desc: document.getElementById('project2-desc'),
+                certificationsHeading: document.getElementById('certifications-heading'),
+                certification1Name: document.getElementById('certification1-name'),
+                certification1Date: document.getElementById('certification1-date'),
+                award1Name: document.getElementById('award1-name'),
+                award1Date: document.getElementById('award1-date'),
+                contactHeading: document.getElementById('contact-heading')
+            };
+
+            for (let key in elements) {
+                elements[key].textContent = translations[lang][key];
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+
+</body>
+
+</html>
