@@ -1,0 +1,125 @@
+/* Overall Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #3a3f51;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Flex container for the two-column layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Flex Item Styling */
+.flex-item {
+    flex: 1;
+    min-width: 45%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Animation for Flex Items */
+.flex-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Color Scheme for Specific Sections */
+.skills {
+    background-color: #f5a623;
+    color: white;
+}
+.projects {
+    background-color: #4a90e2;
+    color: white;
+}
+.certifications {
+    background-color: #7ed321;
+    color: white;
+}
+.awards {
+    background-color: #bd10e0;
+    color: white;
+}
+.contact {
+    background-color: #d0021b;
+    color: white;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Contact Animation */
+.contact:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .flex-item {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}

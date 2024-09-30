@@ -9,18 +9,13 @@
     
     <title>Professional Portfolio</title>
 
-    <!-- Google Fonts for stylish text -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Icons for social media -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Font Awesome CDN Link -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
-    <!-- Style for layout, animations, and colors -->
     <style>
-        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -42,7 +37,6 @@
             color: #ffffff;
         }
 
-        /* Navigation Bar Styles */
         nav {
             display: flex;
             justify-content: space-between;
@@ -83,7 +77,6 @@
             cursor: pointer;
         }
 
-        /* Dropdown Menu for Languages inside Hamburger */
         .menu .dropdown {
             position: relative;
             display: inline-block;
@@ -116,7 +109,6 @@
             display: block;
         }
 
-        /* Responsive Menu for Mobile */
         @media (max-width: 768px) {
             nav .menu {
                 display: none;
@@ -135,12 +127,20 @@
             }
         }
 
-        /* Section Styles */
-        section {
+        .section1 {
             padding: 60px;
             text-align: center;
             background-color: #4b4747;
             margin: 20px 0;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+        }
+
+        .section3{
+            padding: 60px;
+            text-align: center;
+            margin: 20% 0;
             animation: fadeInUp 1.5s ease-in-out;
             border-radius: 100px;
             color: aliceblue;
@@ -155,8 +155,76 @@
             font-size: 18px;
             line-height: 1.6;
         }
-
-        /* Animations */
+        .soft-skill{
+            float: left;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
+        .hard-skill{
+            float: right;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
+        .project{
+            float: left;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
+        .project:hover, .soft-skill:hover, .hard-skill:hover, .project2:hover, .certification:hover, .award:hover{
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+        }
+        .project2{
+            float: right;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
+        .certification{
+            float: left;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
+        .award{
+            float: right;
+            padding: 60px;
+            text-align: center;
+            background-color: #4b4747;
+            margin: 20px 5%;
+            animation: fadeInUp 1.5s ease-in-out;
+            border-radius: 100px;
+            color: aliceblue;
+            width: 30%;
+        }
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -168,7 +236,6 @@
             }
         }
 
-        /* Social Media Icons */
         .social-icons a {
             font-size: 24px;
             margin: 0 10px;
@@ -180,35 +247,36 @@
             color: #ff5e57;
         }
 
-        /* Footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
+            margin: 0%;
         }
 
         .intro-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-.profile-pic img {
-    border: 3px solid;
-}
+        .profile-pic img {
+            border: 3px solid;
+        }
 
-.name h2 {
-    margin-top: 15px;
-    color: #ff5e57;
-}
+        .name h2 {
+            margin-top: 15px;
+            color: #ff5e57;
+        }
 
-/* Skills Section - Remove Bullet Points */
-.skill ul {
-    list-style-type: none;
-    padding-left: 0; /* Remove left padding to align with other text */
-}
+        .skill ul {
+            list-style-type: none;
+            padding-left: 0; 
+        }
+
+        
 
     </style>
 
@@ -216,7 +284,6 @@
 
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="logo">My Portfolio</div>
         <div class="mobile-menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -227,7 +294,6 @@
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
 
-            <!-- Dropdown for Language -->
             <div class="dropdown">
                 <button class="dropdown-btn">Languages</button>
                 <div class="dropdown-content">
@@ -240,8 +306,7 @@
         </div>
     </nav>
 
-    <!-- About Section -->
-<section id="about" class="section">
+<div id="about" class="section1">
     <h2 id="welcome-message">Welcome to My Professional Portfolio</h2>
     <div class="intro-content">
         <div class="profile-pic">
@@ -252,12 +317,11 @@
         </div>
     </div>
     <p id="intro">Web Developer/Game Developer/Programmer/Artist.</p>
-</section>
+</div>
 
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
-        <h2 id="skills-heading">Skills</h2>
+        <h2 id="skills-heading" style="text-align: center;">Skills</h2>
         <div class="skills-container">
             <div class="skill soft-skill">
                 <h3 id="soft-skills-heading">Soft Skills</h3>
@@ -272,47 +336,54 @@
                 <ul>
                     <li id="js-skill">JavaScript</li>
                     <li id="html-css-skill">HTML & CSS</li>
-                    <li id="react-skill">React.js</li>
+                    <li id="react-skill">C++/C/C#</li>
                     <li id="python-skill">Python</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2 id="projects-heading">Projects</h2>
+        <h2 id="projects-heading" style="text-align: center; margin: 20px 46%;">Projects</h2>
         <div class="project-container">
             <div class="project">
-                <h3 id="project1-name">Project Name</h3>
+                <h3 id="project1-name">Game Dev Project</h3>
                 <p id="project1-date">Completed: June 2024</p>
                 <p id="project1-desc">A web application designed to...</p>
             </div>
-            <div class="project">
-                <h3 id="project2-name">Another Project</h3>
+            <div class="project2">
+                <h3 id="project2-name">Database project</h3>
                 <p id="project2-date">Completed: March 2024</p>
                 <p id="project2-desc">A mobile-friendly app that...</p>
             </div>
         </div>
     </section>
 
-    <!-- Certifications, Awards, and Training -->
     <section id="certifications" class="section">
-        <h2 id="certifications-heading">Certifications, Awards & Trainings</h2>
+        <h2 id="certifications-heading" style="text-align: center;">Certifications, Awards & Trainings</h2>
         <div class="certifications-container">
             <div class="certification">
-                <h3 id="certification1-name">Certified Web Developer</h3>
-                <p id="certification1-date">Issued by: XYZ Institute | Date: May 2023</p>
+                <h3 id="certification1-name">Hackathon: 2023</h3>
+                <p id="certification1-date">PUCON: 2023</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
             <div class="award">
-                <h3 id="award1-name">Best Developer Award</h3>
-                <p id="award1-date">Received: September 2022</p>
+                <h3 id="award1-name">Game Dev: 2023-24</h3>
+                <p id="award2-date">Summer Program: 2023</p>
+                <p id="award3-date">Rookie Game Jam: 2023</p>
+                <p id="award4-date">Winter Game Jam: 2023</p>
+                <p id="award5-date">Summer program: 202</p>
+            
             </div>
         </div>
     </section>
-
-    <!-- Contact & Social Media Links -->
-    <section id="contact" class="section">
+    
+    <section id="contact" class="section3">
         <h2 id="contact-heading">Connect With Me</h2>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/ahmed-khalid-499568266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
@@ -321,18 +392,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Language Change -->
     <script>
         const translations = {
             en: {
                 welcomeMessage: "Welcome to My Professional Portfolio",
-                intro: "I am a passionate developer with expertise in web development and a diverse skill set.",
-                videoHeading: "Watch My Introduction",
+                intro: "Web Developer/Game Developer/Programmer/Artist.",
                 skillsHeading: "Skills",
                 softSkillsHeading: "Soft Skills",
                 hardSkillsHeading: "Hard Skills",
@@ -341,26 +409,24 @@
                 problemSolvingSkill: "Problem Solving",
                 jsSkill: "JavaScript",
                 htmlCssSkill: "HTML & CSS",
-                reactSkill: "React.js",
+                reactSkill: "C++/C/C#",
                 pythonSkill: "Python",
                 projectsHeading: "Projects",
-                project1Name: "Project Name",
+                project1Name: "Game Dev Project",
                 project1Date: "Completed: June 2024",
                 project1Desc: "A web application designed to...",
-                project2Name: "Another Project",
+                project2Name: "Database Project",
                 project2Date: "Completed: March 2024",
                 project2Desc: "A mobile-friendly app that...",
                 certificationsHeading: "Certifications, Awards & Trainings",
-                certification1Name: "Certified Web Developer",
-                certification1Date: "Issued by: XYZ Institute | Date: May 2023",
-                award1Name: "Best Developer Award",
-                award1Date: "Received: September 2022",
+                certification1Name: "Hackathon: 2023",
+                certification1Date: "PUCON: 2023",
+                award1Name: "Game Dev: 2023-24",
                 contactHeading: "Connect With Me"
             },
             ar: {
                 welcomeMessage: "مرحبًا بكم في محفظتي المهنية",
                 intro: "أنا مطور شغوف بخبرة في تطوير الويب ومجموعة مهارات متنوعة.",
-                videoHeading: "شاهد مقدمة",
                 skillsHeading: "المهارات",
                 softSkillsHeading: "المهارات الشخصية",
                 hardSkillsHeading: "المهارات التقنية",
@@ -369,7 +435,7 @@
                 problemSolvingSkill: "حل المشكلات",
                 jsSkill: "جافا سكريبت",
                 htmlCssSkill: "HTML و CSS",
-                reactSkill: "React.js",
+                reactSkill: "C++/C",
                 pythonSkill: "بايثون",
                 projectsHeading: "المشاريع",
                 project1Name: "اسم المشروع",
@@ -388,7 +454,6 @@
             ur: {
                 welcomeMessage: "میری پروفیشنل پورٹ فولیو میں خوش آمدید",
                 intro: "میں ایک پرجوش ڈویلپر ہوں جس میں ویب ڈویلپمنٹ کی مہارتیں ہیں۔",
-                videoHeading: "میری تعارف ویڈیو دیکھیں",
                 skillsHeading: "مہارتیں",
                 softSkillsHeading: "سوفٹ اسکلز",
                 hardSkillsHeading: "ہارڈ اسکلز",
@@ -397,7 +462,7 @@
                 problemSolvingSkill: "مسئلہ حل کرنا",
                 jsSkill: "جاوا اسکرپٹ",
                 htmlCssSkill: "HTML اور CSS",
-                reactSkill: "React.js",
+                reactSkill: "C++/C/C#",
                 pythonSkill: "پائتھون",
                 projectsHeading: "پروجیکٹس",
                 project1Name: "پروجیکٹ کا نام",
@@ -416,7 +481,6 @@
             fr: {
                 welcomeMessage: "Bienvenue dans Mon Portfolio Professionnel",
                 intro: "Je suis un développeur passionné avec une expertise en développement web et un ensemble de compétences diversifié.",
-                videoHeading: "Regardez Ma Présentation",
                 skillsHeading: "Compétences",
                 softSkillsHeading: "Compétences Douces",
                 hardSkillsHeading: "Compétences Techniques",
@@ -425,7 +489,7 @@
                 problemSolvingSkill: "Résolution de Problèmes",
                 jsSkill: "JavaScript",
                 htmlCssSkill: "HTML & CSS",
-                reactSkill: "React.js",
+                reactSkill: "C++/C/C#",
                 pythonSkill: "Python",
                 projectsHeading: "Projets",
                 project1Name: "Nom du Projet",
@@ -447,7 +511,6 @@
             const elements = {
                 welcomeMessage: document.getElementById('welcome-message'),
                 intro: document.getElementById('intro'),
-                videoHeading: document.getElementById('video-heading'),
                 skillsHeading: document.getElementById('skills-heading'),
                 softSkillsHeading: document.getElementById('soft-skills-heading'),
                 hardSkillsHeading: document.getElementById('hard-skills-heading'),
