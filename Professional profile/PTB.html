@@ -4,20 +4,24 @@
     <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
     <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
     <meta name="author" content="Ahmed Khalid">
-    <title>Soft Skills</title>
+    <title>Pot The Ball</title>
     <style>
-         body{
+        body {
             background-color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
         }
+
         .section1 {
-            padding: 60px;
+            padding: 5vw;
             text-align: center;
             background-color: #4b4747;
-            margin: 20px 0;
+            margin: 5vw 0;
             animation: fadeInUp 1.5s ease-in-out;
-            border-radius: 100px;
+            border-radius: 50px;
             color: aliceblue;
-            animation: fadeInUp 1.5s ease-in-out;
         }
 
         footer {
@@ -25,51 +29,88 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin: 0%;
         }
 
-        h1{
+        h1 {
             color: #fff;
             padding: 10px;
             text-align: center;
         }
-        h2{
+
+        h2 {
             text-decoration: underline;
         }
 
+        /* For images */
+        .images-container {
+            text-align: center;
+        }
 
+        img {
+            display: inline-block;
+            width: 40%;
+            margin: 10px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* For video */
+        video {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Media query for larger screens */
+        @media screen and (min-width: 768px) {
+            .section1 {
+                margin: 20px 0;
+                padding: 60px;
+                border-radius: 100px;
+            }
+
+            img {
+                width: 20%;
+                height: auto;
+            }
+
+            video {
+                width: 400px;
+            }
+        }
     </style>
+</head>
 
-    <body>
-        <div id="about" class="section1">
-            <div class="intro-content">
-                <h1>Pot The Ball</h1>
-            </div>
+<body>
+    <div id="about" class="section1">
+        <div class="intro-content">
+            <h1>Pot The Ball</h1>
         </div>
     </div>
-        <section class="Capsule Run">
-            <div style="text-align: center;">
-                <img src="PTB1.jpg" alt="Image 1" style="display: inline-block; width: 20%; height: 80%; margin-right: 10px;">
-                <img src="PTB2.jpg" alt="Image 2" style="display: inline-block; width: 20%; height: 80%;">
-            </div>
-            <div id="about" class="section1">
-                <div class="intro-content">
-                    <h1>Gameplay Video</h1>
-                </div>
+
+    <section class="Capsule Run">
+        <div class="images-container">
+            <img src="PTB1.jpg" alt="Image 1">
+            <img src="PTB2.jpg" alt="Image 2">
+        </div>
+
+        <div id="about" class="section1">
+            <div class="intro-content">
+                <h1>Gameplay Video</h1>
             </div>
         </div>
-            <div style="text-align: center;">
-                <video width="400" controls muted>
-                    <source src="PTB.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            
-        </section>
-    </body>
 
+        <div style="text-align: center;">
+            <video controls muted>
+                <source src="PTB.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
-      </footer>
-</head>
+    </footer>
+</body>

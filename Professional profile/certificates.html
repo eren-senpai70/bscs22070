@@ -6,25 +6,26 @@
     <meta name="author" content="Ahmed Khalid">
     <title>Soft Skills</title>
     <style>
-         body{
+        body {
             background-color: #333;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
         .section1 {
-            padding: 60px;
+            padding: 40px 20px;
             text-align: center;
             background-color: #4b4747;
-            margin: 20px 0;
+            margin: 20px 10px;
             animation: fadeInUp 1.5s ease-in-out;
-            border-radius: 100px;
+            border-radius: 20px;
             color: aliceblue;
-            animation: fadeInUp 1.5s ease-in-out;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            margin: 0%;
+            margin: 0;
         }
         @keyframes fadeInUp {
             0% {
@@ -36,34 +37,51 @@
                 transform: translateY(0);
             }
         }
-        .image{
+        .image {
             animation: fadeInUp 1.5s ease-in-out;
             border-radius: 20px;
+            margin-top: 20px;
         }
-        .image:hover{
+        .image img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image img:hover {
             transform: translateY(-10px);
             box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
         }
 
-
+        /* Mobile First */
+        @media (min-width: 600px) {
+            .section1 {
+                padding: 60px;
+                margin: 20px 0;
+                border-radius: 50px;
+            }
+            .image img {
+                width: 40%;
+                height: auto;
+            }
+        }
     </style>
+</head>
 
-    <body>
-        <div id="about" class="section1">
-            <div class="intro-content">
-                <h1>Hackathon</h1>
-            </div>
+<body>
+    <div id="about" class="section1">
+        <div class="intro-content">
+            <h1>Hackathon</h1>
         </div>
     </div>
+
     <section class="Capsule Run">
         <div style="text-align: center;" class="image">
-            <img src="PUCON.jpg" alt="Image 1" style="display: inline-block; width: 40%; height: 50%; margin-right: 10px;border-radius: 50px;">
+            <img src="PUCON.jpg" alt="Image 1">
         </div>
     </section>
-
 
     <footer>
         <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
     </footer>
-    </body>
-</head>
+</body>

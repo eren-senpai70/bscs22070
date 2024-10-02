@@ -1,23 +1,26 @@
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A professional profile showcasing skills, projects, certifications, and awards">
     <meta name="keywords" content="Professional Profile, Skills, Certifications, Projects, Hackathons">
     <meta name="author" content="Ahmed Khalid">
-    <title>Soft Skills</title>
+    <title>Capsule Run</title>
     <style>
-         body{
+        body {
             background-color: #333;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
         .section1 {
-            padding: 60px;
+            padding: 5vw;
             text-align: center;
             background-color: #4b4747;
-            margin: 20px 0;
+            margin: 5vw 0;
             animation: fadeInUp 1.5s ease-in-out;
-            border-radius: 100px;
+            border-radius: 50px;
             color: aliceblue;
-            animation: fadeInUp 1.5s ease-in-out;
         }
 
         footer {
@@ -25,51 +28,94 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin: 0%;
         }
 
-        h1{
+        h1 {
             color: #fff;
             padding: 10px;
             text-align: center;
         }
-        h2{
-            text-decoration: underline;
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
+        .image-container img {
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
 
+        .video-container {
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 80%;
+            border-radius: 15px;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media queries for larger screens */
+        @media screen and (min-width: 768px) {
+            .image-container img {
+                width: 40%;
+                margin-right: 10px;
+            }
+
+            .video-container video {
+                width: 400px;
+            }
+
+            .section1 {
+                padding: 60px;
+                margin: 20px 0;
+                border-radius: 100px;
+            }
+        }
     </style>
+</head>
 
-    <body>
-        <div id="about" class="section1">
-            <div class="intro-content">
-                <h1>Capsule Run</h1>
-            </div>
+<body>
+    <div id="about" class="section1">
+        <div class="intro-content">
+            <h1>Capsule Run</h1>
         </div>
     </div>
-        <section class="Capsule Run">
-            <div style="text-align: center;">
-                <img src="CapsuleRun1.jpg" alt="Image 1" style="display: inline-block; width: 20%; height: 80%; margin-right: 10px;">
-                <img src="CapsuleRun2.jpg" alt="Image 2" style="display: inline-block; width: 20%; height: 80%;">
-            </div>
-            <div id="about" class="section1">
-                <div class="intro-content">
-                    <h1>Gameplay Video</h1>
-                </div>
+
+    <section class="Capsule Run">
+        <div class="image-container">
+            <img src="CapsuleRun1.jpg" alt="Image 1">
+            <img src="CapsuleRun2.jpg" alt="Image 2">
+        </div>
+
+        <div id="about" class="section1">
+            <div class="intro-content">
+                <h1>Gameplay Video</h1>
             </div>
         </div>
-            <div style="text-align: center;">
-                <video width="400" controls muted>
-                    <source src="CR.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            
-        </section>
-    </body>
 
+        <div class="video-container">
+            <video controls muted>
+                <source src="CR.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Ahmed Khalid. All rights reserved.</p>
-      </footer>
-</head>
+    </footer>
+</body>
