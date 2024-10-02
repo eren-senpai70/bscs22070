@@ -302,20 +302,7 @@
             nav .mobile-menu-icon {
                 display: block;
             }
-             h1{
-            /*   font-size: 16px;  */
-            }
-            h2{
-              /* font-size: 14px;*/ 
-            }
-            h3{
-               /* font-size: 13px;  */
-            }
-            p{
-                /* font-size: 12px; */
-            }
             li{
-                /* font-size: 10px; */
                 text-align: center;
             }
             .skill{
@@ -345,9 +332,6 @@
                 overflow: auto;
                 margin: 20px 0%;
 
-            }
-            *{
-               
             }
         }
         
@@ -615,12 +599,22 @@
 
         function toggleMenu() {
             const menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+            menu.style.display = menu.style.display === "flex"? "none" : "flex" ;
         }
+
+        window.addEventListener('resize', function () {
+            const menu = document.getElementById("menu");
+            if (window.innerWidth > 768) {
+                menu.style.display = "flex";
+            } else {
+                menu.style.display = "none";
+            }
+        });
 
         function OW(name) {
             window.location.href = name;
         }
+
     </script>
 
 </body>
